@@ -1,0 +1,3 @@
+class ImproperTireException(Exception):
+	pass
+	
