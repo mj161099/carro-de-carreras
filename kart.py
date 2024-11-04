@@ -10,12 +10,12 @@ class Kart:
         self.numero_ejes = numero_ejes
         self.eje = Eje(numero_ejes)
         self.numero_llantas = self.eje.numero_llantas
-        self.traccion = self.llantas.definir_traccion()
+        self.traccion = self.llantas.TRACCIONES[llantas]
         self.kilometraje = kilometraje
         self.nivel_gasolina_inicial = nivel_gasolina_inicial
         self.peso_inicial = peso_inicial
-        self.peso_extra = self.llantas.definir_peso_extra()
-        self.gasolina_extra = self.llantas.definir_gasolina_extra()
+        self.peso_extra = self.llantas.PESO_EXTRA[llantas]
+        self.gasolina_extra = self.llantas.GASOLINA_EXTRA[llantas]
 
         for llave, valor in kwargs.items():
             setattr(self, llave, valor)
